@@ -1,1 +1,2 @@
-# python_echecs
+# jeu_echecs
+Jeu d'échecs simple en python
