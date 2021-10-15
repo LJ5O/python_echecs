@@ -55,7 +55,7 @@ class Plateau():
         
     def __str__(self):
         retour=""
-        for i in range(len(self._plateau)):
+        for i in range(len(self._plateau)-1, -1, -1):
             for j in range(len(self._plateau)):
                 retour+=str(self._plateau[i][j])+","
             retour+="\n"

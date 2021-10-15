@@ -15,7 +15,7 @@ class PionBasique(Pion):
             return ("Pion noir")
         
     def is_deplacement_correct(self, plateau, old_position: tuple, new_position: tuple):
-        super().is_deplacement_correct(plateau, old_position, new_position)#Appel de la fonction de l'objet parent
+        if(super().is_deplacement_correct(plateau, old_position, new_position)==False):return False#Appel de la fonction de l'objet parent
         
         if(self.is_white()):#Pas le même dépalcement en fonction de la couleur
             

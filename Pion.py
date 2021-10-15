@@ -29,7 +29,7 @@ class Pion():
             return False
         
         if(plateau[new_position[1]][new_position[0]] != None):#Vérifie la couleur et la présence d'un pion à l'endroit du déplacement
-            if(plateau[new_position[1]][new_position[0]].is_white == self.is_white):  #Bloque uniquement si le pion est de la même couleur, pour permettre la capture de pions
+            if(plateau[new_position[1]][new_position[0]].is_white() == self.is_white()):  #Bloque uniquement si le pion est de la même couleur, pour permettre la capture de pions
                 print("Il y a déjà un pion ici")
                 return False
         

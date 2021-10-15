@@ -14,3 +14,11 @@ class Fou(Pion):
         else:
             return ("Fou noir")
 
+    def is_deplacement_correct(self, plateau, old_position: tuple, new_position: tuple):
+        if(super().is_deplacement_correct(plateau, old_position, new_position)==False): return False#Appel de la fonction de l'objet parent. Si le déplacement y est faux, je l'arrête
+        
+        deplacement_x = new_position[0] - old_position[0]
+        deplacement_y = new_position[1] - old_position[1]
+        
+        if(deplacement_x == deplacement_y):#Déplacement en diagonale
+                return True
