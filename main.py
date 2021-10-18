@@ -1,3 +1,5 @@
+from pygame import *
+
 from Plateau import Plateau
 
 from PionBasique import PionBasique
