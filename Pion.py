@@ -23,6 +23,7 @@ class Pion():
     def is_deplacement_correct(self, plateau, old_position: tuple, new_position: tuple):#Positions : x,y
         largeur_plateau = len(plateau[0])
         longueur_plateau = len(plateau)
+        if(old_position==new_position): return False
         
         if(old_position[0]+(new_position[0]-old_position[0])>largeur_plateau or old_position[1]+(new_position[1]-old_position[1])>longueur_plateau):#Je vérifie ici que la pièce ne sort pas du plateau
             print("Déplacement hors du plateau")

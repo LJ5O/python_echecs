@@ -1,4 +1,5 @@
 from Pion import Pion
+from VerifMouvementFouTour import Verif
 
 class Tour(Pion):
     
@@ -17,5 +18,6 @@ class Tour(Pion):
     def is_deplacement_correct(self, plateau, old_position: tuple, new_position: tuple):
         if(super().is_deplacement_correct(plateau, old_position, new_position)==False): return False#Appel de la fonction de l'objet parent. Si le déplacement y est faux, je l'arrête
         
-        if(old_position[0]==new_position[0] or old_position[1]==new_position[1]):#Avance ou recule
-                return True
+        
+        if(Verif.tour(plateau, old_position, new_position)==True): return True
+        else: return False

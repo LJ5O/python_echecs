@@ -1,4 +1,5 @@
 from Pion import Pion
+from VerifMouvementFouTour import Verif
 
 class Reine(Pion):
     
@@ -21,7 +22,9 @@ class Reine(Pion):
         deplacement_x = new_position[0] - old_position[0]
         deplacement_y = new_position[1] - old_position[1]
         
-        if(deplacement_x == deplacement_y):#Déplacement en diagonale
-                return True
+        if(abs(deplacement_x) == abs(deplacement_y)):#Déplacement en diagonale
+                if(Verif.fou(plateau, old_position, new_position)==True): return True
+                else: return False
         elif(old_position[0]==new_position[0] or old_position[1]==new_position[1]):#Avance ou recule
-                return True
+                if(Verif.tour(plateau, old_position, new_position)==True): return True
+                else: return False
