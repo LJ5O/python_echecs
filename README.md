@@ -9,10 +9,11 @@ Au lancement du jeu, la fenêtre de jeu s'ouvre, montrant les pièces sur le pla
 
 Afin de séléctionner une pièce, il faut faire un clic gauche dessus. Les différentes possibilités s'afficheront. *Tenter de séléctionner une pièce n'appartenant pas au joueur renverra une erreur dans la console*
 
+![Capture2](https://user-images.githubusercontent.com/75009579/138714788-cea37a79-c2ac-41ad-9453-dcd23925ad49.PNG)
+
+
 
 Pour déplacer une pièce, il faut réaliser un **clic droit** sur l'une des cases vertes. 
-
-![Capture2](https://user-images.githubusercontent.com/75009579/138714788-cea37a79-c2ac-41ad-9453-dcd23925ad49.PNG)
 
 La partie se termine dès que l'un des rois est capturé, le vainqueur sera annoncé dans la console
 
