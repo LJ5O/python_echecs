@@ -20,9 +20,11 @@ class PionBasique(Pion):
         if(self.is_white()):#Pas le même dépalcement en fonction de la couleur
             
             if(old_position[0]==new_position[0] and old_position[1]+1==new_position[1] and plateau[new_position[1]][new_position[0]]==None):#Avance de 1
+                self._premier_mouvement = False
                 return True
             elif((old_position[0]==new_position[0]+1 or old_position[0]==new_position[0]-1) and old_position[1]+1==new_position[1] and plateau[new_position[1]][new_position[0]]!=None):
                 #Capture d'un ennemi, couleur déjà vérifiée dans la méthode parente
+                self._premier_mouvement = False
                 return True
             elif(old_position[0]==new_position[0] and old_position[1]+2==new_position[1] and plateau[new_position[1]][new_position[0]]==None and self._premier_mouvement):#Premier déplacement
                 self._premier_mouvement = False
@@ -33,9 +35,11 @@ class PionBasique(Pion):
         else:
             
             if(old_position[0]==new_position[0] and old_position[1]-1==new_position[1] and plateau[new_position[1]][new_position[0]]==None):#Avance de 1
+                self._premier_mouvement = False
                 return True
             elif((old_position[0]==new_position[0]+1 or old_position[0]==new_position[0]-1) and old_position[1]-1==new_position[1] and plateau[new_position[1]][new_position[0]]!=None):
                 #Capture d'un ennemi
+                self._premier_mouvement = False
                 return True
             elif(old_position[0]==new_position[0] and old_position[1]-2==new_position[1] and plateau[new_position[1]][new_position[0]]==None and self._premier_mouvement):#Premier déplacement
                 self._premier_mouvement = False
