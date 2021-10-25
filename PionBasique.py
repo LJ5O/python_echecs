@@ -6,7 +6,6 @@ class PionBasique(Pion):
         super().__init__()#Récupère l'initialisation de l'objet parent
         self._type = "Pion Basique"
         self._white=is_white
-        self._mouvement=((0, 1))#J'indique la portée de déplacement du pion, un vecteur x=0 y=1  Format : ( (1, 3), (-1, -3), ... ) )
         self._premier_mouvement = True
         
     def __str__(self):
