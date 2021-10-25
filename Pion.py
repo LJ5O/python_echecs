@@ -9,12 +9,6 @@ class Pion():
     
     def is_white(self):#Permet de savoir s'il est blanc ou non
         return self._white
-        
-    def egal(self, pion):#Compare deux pions pour savoir s'ils se valent
-        if(self._type==pion.get_type() and self._white==pion.is_white() and self._mouvement==pion.get_mouvement()):
-            return True
-        else:
-            return False
 
     def is_deplacement_correct(self, plateau, old_position: tuple, new_position: tuple):#Positions : x,y
         largeur_plateau = len(plateau[0])
