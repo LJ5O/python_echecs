@@ -39,6 +39,7 @@ class PionBasique(Pion):
                 return True
             elif(old_position[0]==new_position[0] and old_position[1]-2==new_position[1] and plateau[new_position[1]][new_position[0]]==None and self._premier_mouvement):#Premier déplacement
                 self._premier_mouvement = False
+                return True
             else:#Incorrect
                 return False
             
