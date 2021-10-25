@@ -6,8 +6,10 @@ class PionBasique(Pion):
         super().__init__()#Récupère l'initialisation de l'objet parent
         self._type = "Pion Basique"
         self._white=is_white
-        self._mouvement=((0, 1))#J'indique la portée de déplacement du pion, un vecteur x=0 y=1  Format : ( (1, 3), (-1, -3), ... ) )
         self._premier_mouvement = True
+        
+    def premier_mouvement_fait(self):
+        self._premier_mouvement = False
         
     def __str__(self):
         if(self._white):
@@ -26,7 +28,6 @@ class PionBasique(Pion):
                 #Capture d'un ennemi, couleur déjà vérifiée dans la méthode parente
                 return True
             elif(old_position[0]==new_position[0] and old_position[1]+2==new_position[1] and plateau[new_position[1]][new_position[0]]==None and self._premier_mouvement):#Premier déplacement
-                self._premier_mouvement = False
                 return True
             else:#Incorrect
                 return False
@@ -39,7 +40,7 @@ class PionBasique(Pion):
                 #Capture d'un ennemi
                 return True
             elif(old_position[0]==new_position[0] and old_position[1]-2==new_position[1] and plateau[new_position[1]][new_position[0]]==None and self._premier_mouvement):#Premier déplacement
-                self._premier_mouvement = False
+                return True
             else:#Incorrect
                 return False
             

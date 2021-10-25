@@ -6,7 +6,6 @@ class Roi(Pion):
         super().__init__()#Récupère l'initialisation de l'objet parent
         self._type = "Roi"
         self._white=is_white
-        self._mouvement=(('*', '*'))#J'indique la portée de déplacement du pion, un vecteur x=0 y=1  Format : ( (1, 3), (-1, -3), ... ) )
         
         
     def __str__(self):
@@ -21,5 +20,5 @@ class Roi(Pion):
             deplacement_x = new_position[0] - old_position[0]
             deplacement_y = new_position[1] - old_position[1]
             
-            if(abs(deplacement_x) == 1 or abs(deplacement_y)==1):#Déplacement en diagonale
+            if((abs(deplacement_x) == 0 or abs(deplacement_x) == 1) and (abs(deplacement_y)==1 or abs(deplacement_y)==0)):#Déplacement en diagonale
                     return True
