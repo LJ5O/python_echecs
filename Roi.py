@@ -21,5 +21,5 @@ class Roi(Pion):
             deplacement_x = new_position[0] - old_position[0]
             deplacement_y = new_position[1] - old_position[1]
             
-            if(abs(deplacement_x) == 1 or abs(deplacement_y)==1):#Déplacement en diagonale
+            if((abs(deplacement_x) == 0 or abs(deplacement_x) == 1) and (abs(deplacement_y)==1 or abs(deplacement_y)==0)):#Déplacement en diagonale
                     return True
