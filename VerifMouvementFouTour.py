@@ -54,6 +54,6 @@ class Verif():
                 return True
             else:#Je recule
                 for i in range(old_position[0]-1, new_position[0], -1):#Boucle sur toutes les cases traversées
-                    if(plateau[i][old_position[1]]!=None):#S'il y a quelque chose sur le chemin, déplacement annulé
+                    if(plateau[old_position[1]][i]!=None):#S'il y a quelque chose sur le chemin, déplacement annulé
                         return False
                 return True
